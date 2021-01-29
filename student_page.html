@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Roberto Sanchez | Student Page</title>
+  <!-- Import for Poppins font style-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding-bottom: 0;
+      background-color: #001b24;
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      padding: 50px 0px;
+      box-sizing: border-box;
+    }
+
+    p,
+    a,
+    h2 {
+      font-family: "Poppins", sans-serif;
+    }
+
+    #canvas {
+      margin: 0 auto;
+      display: block;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+
+    #container {
+      width: 992px;
+      position: relative;
+      z-index: 1;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+
+    #row1 {
+      font-family: "Poppins", sans-serif;
+      display: block;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    #row1 h1 {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    #row1 p {
+      text-align: center;
+    }
+
+    #row3 {
+      display: block;
+      background-color: #fff;
+      margin-top: 150px;
+      clear: both;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 10px;
+      padding-bottom: 15px;
+    }
+
+    #row3 .col {
+
+      color: #001b24;
+      padding: 20px;
+      background-color: #fff;
+      float: left;
+      width: calc(50% - 40px);
+    }
+
+    #row3 .col h2 {
+      font-weight: 600;
+      text-align: center;
+      font-size: 21px;
+      margin: 0 0 15px 0;
+    }
+
+    #change-color-btn {
+      margin-top: 15px;
+      display: block;
+      width: 150px;
+      margin: auto;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #change-color-btn p{
+      margin:0;
+      padding:.3rem 1rem;
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      #container {
+        width: 100%;
+
+      }
+
+      #row3 {
+        margin-top: 0px;
+      }
+
+
+      #row3 .col {
+        width: 100%;
+        box-sizing: border-box;
+        float: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      body {
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      #container {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- canvas for ghosts -->
+  <canvas id="canvas"></canvas>
+
+  <!-- container for all content -->
+  <div id="container">
+    <div id="row1">
+      <h1>Roberto Sanchez</h1>
+
+      <p>
+        <a href="mailto:sanc735@usc.edu">sanc735@usc.edu</a>
+      </p>
+
+      <button id="change-color-btn" onclick="changeColorHandler()">
+        <p>
+          Favourite Color
+        </p>
+      </button>
+    </div>
+
+    <div id="row3">
+      <div class="col">
+        <h2>Assignments</h2>
+        <ul>
+          <li>
+            <a href="./assignment_01/index.html" target="_blank">Assignment 01: JS Photo Gallery</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h2>Labs</h2>
+        <ul>
+          <li>
+            <a href="./student_page.html">Lab 01: Student Page</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- script for animated ghosts on canvas-->
+  <script src="js/app.js"></script>
+  <!-- script changes background color on button click -->
+  <script src="js/changeColor.js"></script>
+</body>
+
+</html>
